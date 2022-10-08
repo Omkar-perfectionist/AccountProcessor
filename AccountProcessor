@@ -1,5 +1,5 @@
 public class AccountProcessor {
-
+   @future(callout=true)
     public static void countContacts(Set<Id> acctids){
         List<Account> acctlist=new List<Account>();
         acctlist=[Select id,Number_of_Contacts__c,(Select id from Contacts)From Account where Id in:acctids];
