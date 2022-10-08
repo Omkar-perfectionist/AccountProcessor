@@ -1,3 +1,4 @@
+@isTest
 public class AccountProcessorTest {
 
     static testmethod void test1()
@@ -12,6 +13,9 @@ public class AccountProcessorTest {
         cont.AccountId = a.Id;
         Insert cont;
         acctset2.add(a.id);
+        Test.startTest();
+        AccountProcessor.countContacts(acctset2);
+        Test.stopTest();
        
     }
     
