@@ -4,5 +4,9 @@ public class AccountProcessor {
         List<Account> acctlist=new List<Account>();
         acctlist=[Select id,Number_of_Contacts__c,(Select id from Contacts)From Account where Id in:acctids];
     
+      for(Account acct:acctlist){
+           List<Contact> lstCont = acct.contacts ;
+          }
+    
     }
 }
