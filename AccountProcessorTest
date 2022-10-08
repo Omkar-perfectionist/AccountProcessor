@@ -1,0 +1,18 @@
+public class AccountProcessorTest {
+
+    static testmethod void test1()
+    {  
+     Set<Id> acctset2=new Set<Id>();
+        Account a = new Account();
+        a.Name = 'Test Account';
+        Insert a;
+        Contact cont = New Contact();
+        cont.FirstName ='Bob';
+        cont.LastName ='Masters';
+        cont.AccountId = a.Id;
+        Insert cont;
+        acctset2.add(a.id);
+       
+    }
+    
+}
